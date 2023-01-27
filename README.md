@@ -31,11 +31,33 @@ selenium公式ドキュメント及び、pythonライブラリドキュメント
 
 - Docker
 - vscode
-- DevContiner(vscode拡張機能)
+- DevContainer(vscode拡張機能)
+
+#### seleniumドライバーを起動する
+
+**x86_64の場合**
 
 `./selenium-exa`ディレクトリにて`docker compose up -d`を実行する。
 
 http://localhost:4444 に接続し、起動したかを確認する。
+
+**ARMの場合**
+
+`./docker-compose.yml`の書き換えが必要になる。
+下記のように書き換える。
+
+```yaml
+    # x86_64
+    # image: selenium/standalone-chrome:latest
+    # arm
+    image: seleniarm/standalone-chromium:latest
+```
+
+`./selenium-exa`ディレクトリにて`docker compose up -d`を実行する。
+
+http://localhost:4444 に接続し、起動したかを確認する。
+
+#### DevContainerの起動
 
 vacodeにてコマンドパレットを表示し、　`cmd(ctrl) + shift + p`　下記のコマンドを実行する。
 
