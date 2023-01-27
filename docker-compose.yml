@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  selenium:
+    # x86_64
+    image: selenium/standalone-chrome:latest
+    # M1チップ
+    # image: seleniarm/standalone-chromium:latest
+    shm_size: "2g"
+    container_name: 'selenium'
+    restart: unless-stopped
+    ports:
+      - "4444:4444"
+      - "5900:5900"
