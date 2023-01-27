@@ -6,7 +6,6 @@ aizulabのページからお知らせ一覧を表示する。
 .
 ├── README.md
 ├── doc
-│   ├── new-project.md
 │   └── selenium.md
 ├── docker-compose.yml
 ├── poetry.lock
